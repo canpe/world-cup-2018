@@ -4,44 +4,24 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
         <link rel="stylesheet" href="src/css/reset.css"/>
         <link rel="stylesheet" href="src/css/main.css"/>
-        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.rtl.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.silver.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.mobile.all.min.css"/>
+    
+        <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/jquery.min.js"></script>
+		<script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>
         <script src="src/js/data.js"></script>
-		<script src="src/js/competition.js"></script>
+        <script src="src/js/dataAdapter.js"></script>
+		<script src="src/js/main.js"></script>
     </haed>
     <body>
         <div class="top-panel">
             <label class="title-label">FIFA WORLD CUP 2018 COMPETITION</label>
         </div>
-        <div class="main-panel">
-            <div class="sub-panel left">
-                <div class="widget-panel right">
-                    <span class="widget-tile left"></span>
-                    <div class="widget-body">
-                        <label class="widget-title">Ruta</label>
-                        <label class="widget-point left">99</label>
-                        <label class="widget-text left">POINTS</label>
-                    </div>
-                    <div class="widget-footer right">
-                        <label class="widget-scores right"></label>
-                    </div>
-                </div>
-            </div>
-            <div class="sub-panel right">
-                <div class="widget-panel">
-                    <span class="widget-tile right"></span>
-                    <div class="widget-body">
-                        <label class="widget-title">Can</label>
-                        <label class="widget-point right">99</label>
-                        <label class="widget-text right">POINTS</label>
-                    </div>
-                    <div class="widget-footer right">
-                        <label class="widget-scores right"></label>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="main-panel" class="main-panel"></div>
     </body>
 </html>
 <script>
-	$(document).ready(function() { new Competition();});
+	$(document).ready(function() { new Main(); });
 </script>

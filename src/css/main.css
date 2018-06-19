@@ -24,7 +24,8 @@ body {
 }
 
 .widget-panel {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 400px;
     margin: 4em 7em;
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.03);
@@ -37,24 +38,16 @@ body {
     height: 7px;
 }
 
-.widget-body {
-    height: 100%;
-}
-
-.widget-tile.left {
-    background-color: #4dffdb;
-}
-
-.widget-tile.right {
-    background-color:  #ff9933;
-}
-
 .widget-title {
     display: block;
     font-size: 2.5em;
     font-weight: 300;
     padding-left: 0.8em;
     padding-top: 0.8em;
+}
+
+.widget-body {
+    flex-grow: 1;
 }
 
 .widget-point {
@@ -71,12 +64,17 @@ body {
     font-weight: 800;
 }
 
-.widget-body .left {
-    color:#4dffdb;
+.widget-footer {
+    height: 30px;
+    text-align: center;
 }
 
-.widget-body .right {
-    color:#ff9933;
+.widget-scores {
+    cursor: pointer;
+}
+.widget-scores:hover {
+    opacity: 0.6;
+    text-decoration: underline;
 }
 
 .title-label{
