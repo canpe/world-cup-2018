@@ -23,7 +23,7 @@ function DataAdapter () {
     this.getMatchResults = function () {
         return _getMatchResults();
     };
-
+    
     this.getPlayer = function (id) {
         var result = $.grep(_getPlayers(), function(e){ return e.Id == id; }); 
         return result.length > 0 ? result[0] : null;
@@ -44,6 +44,11 @@ function DataAdapter () {
         return result.length > 0 ? result[0] : null;
     };
 
+    this.getMatchResult = function (id) {
+        var result = $.grep(_getMatchResults(), function(e){ return e.Id == id; }); 
+        return result.length > 0 ? result[0] : null;
+    };
+
     this.getPlayerMatches = function (id) {
         var result = $.grep(_getPlayerMatches(), function(e){ return e.Id == id; }); 
         return result.length > 0 ? result[0] : null;
@@ -56,6 +61,10 @@ function DataAdapter () {
             return resultMatch.length > 0 ? resultMatch[0] : null;
         }
         return null;
+    };
+
+    this.updateMatchResults = function(results) {
+        $.each(results, function(idx, val) { _updateMatchResult(val); });
     };
 
     var _getPlayers = function () {
@@ -80,5 +89,9 @@ function DataAdapter () {
 
     var _getMatchResults = function () {
         return Data.MatchResults;
+    };
+
+    var _updateMatchResult = function (result) {
+        Data.MatchResults.push(result);
     };
 }

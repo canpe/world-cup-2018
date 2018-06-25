@@ -72,6 +72,7 @@ body {
 .widget-scores {
     cursor: pointer;
 }
+
 .widget-scores:hover {
     opacity: 0.6;
     text-decoration: underline;
@@ -82,4 +83,21 @@ body {
     text-align: center;
     margin: 1.2em 0em;
     font-size: 1.2em; 
+}
+
+.k-grid {
+    overflow-y: scroll;
+    margin: 0em 1em;
+}
+
+.k-grid-header {
+    display: none;
+}
+
+html .k-grid tr:hover {
+    background: transparent;
+}
+   
+.k-grid tr.k-alt:hover {
+    background: rgb(251, 251, 251);
 }
