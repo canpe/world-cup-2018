@@ -39,7 +39,7 @@ function MatchGrid () {
         return {
             field: "TeamA",
             template: getTeamAElement,
-            width: 40,
+            width: 30,
         }
     };
 
@@ -55,7 +55,7 @@ function MatchGrid () {
         return {
             field: "TeamA",
             template: getTeamBElement,
-            width: 40,
+            width: 30,
         }
     };
 
@@ -63,7 +63,7 @@ function MatchGrid () {
         return {
             field: "PlayerMatch",
             template: getPlayerMatchElement,
-            width: 20,
+            width: 40,
         }
     };
 
@@ -94,6 +94,6 @@ function MatchGrid () {
         var scoreA = dataItem["PlayerMatch"].ScoreA;
         var scoreB = dataItem["PlayerMatch"].ScoreB; 
         var points = dataItem["Points"]; 
-        return "<div style='text-align:center;'><span>" + scoreA + "</span> - <span>" + scoreB + "</span><span> (" + points + ")</span></div>"; 
+        return "<div style='text-align:center;'><span>" + scoreA + "</span> - <span>" + scoreB + "</span><span style='margin-left:0.75em;'>(" + points + " pts)</span></div>"; 
     };
 }

@@ -16,21 +16,24 @@ body {
 .main-panel {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     flex-grow: 1;
 }
 
 .sub-panel {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .widget-panel {
     display: flex;
     flex-direction: column;
     height: 400px;
-    margin: 4em 7em;
+    margin: 4em 0em;
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.03);
     border-radius: 3px;
-    max-width: 500px;
+    width: 450px;
 }
 
 .widget-tile {
@@ -100,4 +103,8 @@ html .k-grid tr:hover {
    
 .k-grid tr.k-alt:hover {
     background: rgb(251, 251, 251);
+}
+
+.k-grid .k-grid-content tr td img {
+    margin-top: 0.3em;
 }
